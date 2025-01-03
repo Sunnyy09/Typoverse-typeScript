@@ -5,9 +5,12 @@
 //     isStudent: boolean
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-var pair = {
-    apple: [5],
-    banana: [3],
-    cherry: [7]
-};
-console.log(pair);
+var employees = [
+    { name: "John Doe", position: "Developer" },
+    { name: "Maxi", position: "Designer" },
+    { name: "Alice", position: "Developer" },
+    { name: "Bob", position: "Designer" },
+    { name: "Charlie", position: "Project Manager" }
+];
+var user = { id: 21, name: "John Doe", status: "active" };
+console.log("User Status: ".concat(user.status, ", Name: ").concat(user.name));

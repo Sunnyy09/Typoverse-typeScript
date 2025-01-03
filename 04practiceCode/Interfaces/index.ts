@@ -115,7 +115,73 @@
 // console.log(pair);
 
 
+// Interface with Method and Parameter Types
 
+// interface EventHandler {
+//     onEvent(eventName: string, callback: (data: string) => void): void;
+// }
+
+// class EventManager implements EventHandler {
+//     private events: Record<string, ((data: string) => void)[]> = {};
+
+//     onEvent(eventName: string, callback: (data: string) => void): void {
+//         if (!this.events[eventName]) {
+//             this.events[eventName] = [];
+//         }
+//         this.events[eventName].push(callback);
+//     }
+
+//     emit(eventName: string, data: string): void {
+//         const callbacks = this.events[eventName];
+//         if (callbacks) {
+//             callbacks.forEach(callback => callback(data));
+//         }
+//     }
+// }
+
+// const eventManager = new EventManager();
+
+// eventManager.onEvent("userLoggedIn", (data) => {
+//     console.log(`User logged in: ${data}`);
+// });
+
+// eventManager.onEvent("userLoggedOut", (data) => {
+//     console.log(`User logged out: ${data}`);
+// });
+
+// eventManager.emit("userLoggedIn", "John Doe");
+// eventManager.emit("userLoggedOut", "John Doe");
+
+
+//Using Interfaces with Arrays
+
+interface Employee {
+    name: string
+    position: string
+}
+
+const employees: Employee[] = [
+    {name: "John Doe",position: "Developer"},
+    {name: "Maxi", position: "Designer"},
+    { name: "Alice", position: "Developer" },
+    { name: "Bob", position: "Designer" },
+    { name: "Charlie", position: "Project Manager" }
+]
+
+// employees.map((emp) => {
+//     console.log(emp.name);
+// })
+
+// Interface with a Union Type
+
+interface User {
+    id: number
+    name: string
+    status: "active" | "inactive"
+}
+
+const user: User = {id: 21, name: "John Doe", status: "active"}
+console.log(`User Status: ${user.status}, Name: ${user.name}`);
 
 
 export {}
